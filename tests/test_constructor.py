@@ -9,8 +9,8 @@ def test_switch_to_buns(driver):
     assert "tab_tab_type_current" in buns.get_attribute("class")
 
 def test_switch_to_sauces(driver):
-    driver.find_element(*Locators.SAUСES).click()
-    sauces = driver.find_element(*Locators.SAUСES)
+    driver.find_element(*Locators.SAUCES).click()
+    sauces = driver.find_element(*Locators.SAUCES)
 
     assert "tab_tab_type_current" in sauces.get_attribute("class")
 
