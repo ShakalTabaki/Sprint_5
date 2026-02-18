@@ -18,7 +18,7 @@ def generate_email():
         return f"elenagimpel33{random.randint(100,999)}@yandex.ru"
     return _generate
 
-@pytest
+
 def login(driver):
     driver.find_element(*Locators.EMAIL).send_keys(EMAIL)
     driver.find_element(*Locators.PASSWORD).send_keys(PASSWORD)

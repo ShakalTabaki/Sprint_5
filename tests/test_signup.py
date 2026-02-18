@@ -14,7 +14,7 @@ def test_success_registration(driver, generate_email):
     driver.find_element(*Locators.REGISTER_BUTTON).click()
     WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
 
-    assert "login" in driver.current_url
+    assert driver.find_element(*Locators.LOGIN_BUTTON)
 
 
 def test_registration_invalid_password(driver, generate_email):
@@ -26,4 +26,4 @@ def test_registration_invalid_password(driver, generate_email):
     driver.find_element(*Locators.REGISTER_BUTTON).click()
     WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.INCORRECT_PASS))
 
-    assert driver.find_element(Locators.INCORRECT_PASS)
+    assert driver.find_element(*Locators.INCORRECT_PASS)
