@@ -1,11 +1,12 @@
 import pytest
 import random
 from selenium import webdriver
+from data import BASE_URL
 
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()
-    driver.get("https://stellarburgers.education-services.ru")
+    driver.get(BASE_URL)
     yield driver
     driver.quit()
 

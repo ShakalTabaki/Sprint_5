@@ -2,11 +2,7 @@ from selenium.webdriver.common.by import By
 from locators import Locators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
-
-EMAIL = "elenagimpel34123@yandex.ru"
-PASSWORD = "qwerty"
+from data import EMAIL, PASSWORD
 
 
 def login(driver):

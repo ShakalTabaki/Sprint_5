@@ -2,10 +2,8 @@ from locators import Locators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from data import EMAIL, PASSWORD
 
-
-EMAIL = "elenagimpel34123@yandex.ru"
-PASSWORD = "qwerty"
 
 def login(driver):
     driver.find_element(*Locators.EMAIL).send_keys(EMAIL)
