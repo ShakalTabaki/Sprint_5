@@ -12,7 +12,7 @@ def test_success_registration(driver, generate_email):
     driver.find_element(*Locators.EMAIL).send_keys(generate_email())
     driver.find_element(*Locators.PASSWORD).send_keys("QWERTY")
     driver.find_element(*Locators.REGISTER_BUTTON).click()
-    WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.XPATH, "//button[text()='Войти']")))
+    WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
 
     assert "login" in driver.current_url
 
@@ -24,6 +24,6 @@ def test_registration_invalid_password(driver, generate_email):
     driver.find_element(*Locators.EMAIL).send_keys(generate_email())
     driver.find_element(*Locators.PASSWORD).send_keys("Q")
     driver.find_element(*Locators.REGISTER_BUTTON).click()
-    WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.XPATH, "//p[text()='Некорректный пароль']")))
+    WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.INCORRECT_PASS))
 
-    assert driver.find_element(By.XPATH, "//p[text()='Некорректный пароль']")
+    assert driver.find_element(Locators.INCORRECT_PASS)

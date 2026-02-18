@@ -19,4 +19,7 @@ class Locators:
     BUNS = (By.XPATH, "//span[text()='Булки']/parent::div")
     SAUCES = (By.XPATH, "//span[text()='Соусы']/parent::div")
     FILLINGS = (By.XPATH, "//span[text()='Начинки']/parent::div")
+    ORDER_BUTTON = (By.XPATH, "//button[text()='Оформить заказ']")
+    SAVE_BUTTON = (By.XPATH, "//button[text()='Сохранить']")
+    INCORRECT_PASS = (By.XPATH, "//p[text()='Некорректный пароль']")
 
